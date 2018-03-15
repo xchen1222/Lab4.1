@@ -24,7 +24,12 @@ public class Deck {
 		return unDealt.size(); 
 	}
 	
-	public  deal() {
-		
+	public int deal() {
+		while ( isEmpty()) {
+			Card c1 = new Card ("J" , "Hearts" , 11) ; 
+			System.out.println(c1);
+			return 8 ;
+		}
+		return 7 ; 
 	}
 }

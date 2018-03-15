@@ -1,24 +1,66 @@
 
 public class Card {
 
-	String[] rank ; 
-	String[] suit ;
-	int[] value ; 
+	private String rank ; 
+	private String suit ;
+	private int pointValue ; 
 	
 	
 	
-	public Card (String[] rank , String[] suit , int[] value) {
+	public Card (String rank , String suit , int pointValue) {
 		this.rank = rank ; 
 		this.suit = suit ; 
-		this.value = value; 
+		this.pointValue = pointValue; 
 	}
 
 
 
+	public String getRank() {
+		return rank;
+	}
 
 
 
+	public void setRank(String rank) {
+		this.rank = rank;
+	}
 
+
+
+	public String getSuit() {
+		return suit;
+	}
+
+
+
+	public void setSuit(String suit) {
+		this.suit = suit;
+	}
+
+
+
+	public int getpointValue() {
+		return pointValue;
+	}
+
+
+
+	public void setValue(int pointValue) {
+		this.pointValue = pointValue;
+	}
+
+
+	
+	public boolean equalsCard (Card A , Card B) {
+		if (A.getpointValue() == (B.getpointValue())) 
+			return false; 
+		return true; 
+	}
+
+
+	public String toString() {
+		return   "Card: " + getRank() + " " + getSuit() + " " +getpointValue()   ; 
+	}
 
 
 

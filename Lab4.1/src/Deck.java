@@ -24,12 +24,20 @@ public class Deck {
 		return unDealt.size(); 
 	}
 	
-	public int deal() {
+	public Card Deal() {
 		while ( isEmpty()) {
-			Card c1 = new Card ("J" , "Hearts" , 11) ; 
-			System.out.println(c1);
-			return 8 ;
+			Dealt.add(unDealt.get(0)) ;
+			unDealt.remove(0) ; 
+			return Dealt.get(Dealt.size()-1); 
 		}
-		return 7 ; 
+		return null ; 
+	}
+	public void shuffle() {
+		while(Dealt.size() != 0 ) {
+			unDealt.add(Dealt.get(0)) ; 
+			Dealt.remove(0) ; 
+		}
+		//Swap Method Here
+		
 	}
 }

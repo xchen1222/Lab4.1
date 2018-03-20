@@ -7,8 +7,10 @@ public class Deck {
 	
 	
 	public  Deck(String[] Rank , String[] Suit, int[] pointValue) {
+		this.Dealt=new ArrayList<Card>() ;
+		this.unDealt = new ArrayList<Card>(); 
 		for ( int i = 0 ; i < Rank.length-1 ; i++) {
-			for ( int j = 0 ; j < Rank.length-1 ; j++) {
+			for ( int j = 0 ; j < Suit.length-1 ; j++) {
 				unDealt.add(new Card(Rank[i] , Suit[j], pointValue[i]));
 			}
 		}
@@ -30,8 +32,10 @@ public class Deck {
 			unDealt.remove(0) ; 
 			return Dealt.get(Dealt.size()-1); 
 		}
-		return null ; 
+		return Dealt.get(Dealt.size()-1); 
 	}
+
+	
 	public void shuffle() {
 		while(Dealt.size() != 0 ) {
 			unDealt.add(Dealt.get(0)) ; 

@@ -59,7 +59,7 @@ public class Card {
 
 
 	public String toString() {
-		return   "Card: " + getRank() + " " + getSuit() + " " +getpointValue()   ; 
+		return   "Card: " + getRank() + " of " + getSuit() + " " +getpointValue()   ; 
 	}
 
 
